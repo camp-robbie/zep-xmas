@@ -1860,7 +1860,7 @@ function currentTrackName() {
     return PLAYLIST[trackIndex] ?? "";
 }
 function trackUrl(fileName) {
-    return "./" + encodeURIComponent(fileName).replace(/%2F/g, "/");
+    return "/bgm/" + encodeURIComponent(fileName);
 }
 function ensureBgm() {
     if (bgmAudio) return;
