@@ -1,26 +1,5 @@
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-
-/**
- * ✅ 이번 완성본 변경사항
- * 1) 소셜 디스턴싱 AI(밀집 회피)
- *    - 이동 중: 주변 NPC가 가까우면 separation(분리) 힘 적용
- *    - 타겟 선택 시: 후보 지점의 "근처 밀집도"를 점수화해서 덜 붐비는 곳을 선택
- *    - 스턱 감지(뭉쳐 멈춤) 시 강제 재타겟
- *
- * 2) 울타리/플레이 공간 확대
- *    - PLAY_AREA_R 증가
- *    - ground/plaza/path 크기 확대
- *    - fence ring 반경 확대
- *    - 집/숲 배치 반경도 함께 확대
- *
- * 3) CS 퀴즈 5문제 = 5명에게서 1문제씩 + 5문제 중복 없음(셔플 후 5개)
- *
- * ⚠️ HTML에 아래 요소가 있어야 함
- * - <div id="app"></div>
- * - <button id="bgmBtn">...</button>
- * - <div id="msg"></div>
- */
+import * as THREE from "https://unpkg.com/three@0.160.0/build/three.module.js";
+import { OrbitControls } from "https://unpkg.com/three@0.160.0/examples/jsm/controls/OrbitControls.js";
 
 // -----------------------------------------------------
 // DOM
