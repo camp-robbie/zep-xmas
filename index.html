@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZEP 느낌 크리스마스 마을</title>
+    <style>
+        html, body { margin:0; height:100%; overflow:hidden; background:#05060a; }
+        #app { width:100%; height:100%; }
+
+        .hud{
+            position:fixed; left:16px; top:16px; z-index:10;
+            display:flex; gap:10px; align-items:center;
+            color:#e9eefc; font-family: ui-sans-serif, system-ui, -apple-system;
+            background: rgba(0,0,0,.35);
+            border:1px solid rgba(255,255,255,.12);
+            padding: 10px 12px; border-radius: 12px;
+            backdrop-filter: blur(8px);
+            max-width: min(720px, calc(100vw - 32px));
+        }
+        .hud .left{ min-width: 220px; }
+        .hud b{ color:#fff; }
+        .hud small{ opacity:.85; display:block; margin-top:4px; line-height: 1.25; }
+
+        .btn{
+            cursor:pointer; user-select:none;
+            padding:8px 10px; border-radius:10px;
+            background: rgba(255,255,255,.08);
+            border:1px solid rgba(255,255,255,.14);
+            color:#fff; font-size:14px;
+            white-space:nowrap;
+        }
+        .btn:active{ transform: translateY(1px); }
+    </style>
+</head>
+<body>
+<div class="hud">
+    <div class="left">
+        <b>🎄 ZEP 느낌 크리스마스 마을</b>
+        <small>
+            드래그: 회전 · 휠: 줌 · 더블클릭: 리셋<br/>
+            주민 클릭: 대사
+        </small>
+    </div>
+    <button id="bgmBtn" class="btn">🔇 BGM OFF</button>
+    <div id="msg" style="opacity:.9; font-size:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></div>
+</div>
+
+<div id="app"></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
